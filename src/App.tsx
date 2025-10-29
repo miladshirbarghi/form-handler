@@ -21,7 +21,8 @@ const schema = yup
       .string()
       .required("Phone number is required")
       .matches(/^[0-9]+$/, "Must be only digits")
-      .min(10, "Must be at least 10 digits"),
+      .min(10, "Must be at least 10 digits")
+      .max(11, "Must be at most 11 digits"),
     email: yup.string().email("Invalid email").required("Email is required"),
     password: yup
       .string()
